@@ -26,9 +26,9 @@ class App extends React.Component {
         </div> 
         <div>
           permutator 
-          <ul>
+          <ul >
 
-            <li> permutator(['c','a','t'])        => <PrintList items={permutator(['c','a','t'])}   />  </li>
+            <li className='permutator-cat' > permutator(['c','a','t'])        => <PrintList items={permutator(['c','a','t'])}   />  </li>
 
           </ul>
         </div>        
