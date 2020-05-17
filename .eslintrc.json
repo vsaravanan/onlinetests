@@ -1,0 +1,43 @@
+{
+  "extends": [
+    "react-app",
+    "prettier",
+    "eslint:recommended",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": ["html", "standard", "prettier", "react", "import", "flowtype"],
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-console": "off",
+    "no-const-assign": "warn",
+    "no-this-before-super": "warn",
+    "no-undef": "warn",
+    "no-unreachable": "warn",
+    "no-unused-vars": "warn",
+    "constructor-super": "warn",
+    "valid-typeof": "warn",
+    "no-extra-semi": "error",
+    "prettier.singleQuote": "true",
+    "prettier.jsxSingleQuote": "true",
+    "semi": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
+  },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "detect",
+      "flowVersion": "0.53"
+    }
+  },
+  "globals":{
+    "BigInt": "true"
+  } 
+}
