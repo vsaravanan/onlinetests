@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
-import {permutator} from 'permutator';
-import {PrintList} from 'PrintList';
+import {permutator} from 'components/permutator';
+import {PrintList} from 'lib/PrintList';
 import React from 'react'
 
 

@@ -5,7 +5,7 @@ export const longestPalindrome_dynamicprogramming = (s) => {
   }
 
 
-  let b = s.split("")
+  // let b = s.split("")
 
 
   const palin = (x, f, l) => {
@@ -44,32 +44,41 @@ export const longestPalindrome_dynamicprogramming = (s) => {
 
   let lastfound = ""
   for (let i = 0; i < s.length; i++) {
-    b = s.slice(i,s.length)
-    // console.log("b " + i + "  " + b )
-    if (lastfound.length >= b.length) {
-      // console.log("lastfound.length >= b.length")
-      break;
+    // b = s.slice(i,s.length)
+    let mysize = (s.length - i )
+    // console.log("b " + i + "  " + b + "  " + mysize)
+    if (lastfound !== "") {
+      break
     }
-
-    for (let j = b.length, k = 1; i<=j, j > 0; j--, k++) {
-      let t = b.slice(0, j)
-      // console.log("t " + j + "  " + t )
-        if (lastfound.length >= t.length) {
-          // console.log("lastfound.length >= t.length")
-          break
-        }
+    for (let j = 0; j <= i ; j++) {
+      let t = s.substr(j, mysize)
+        // console.log(" t " + i + "  " + t + "  " + j )
         const tmp = palin(t, 0, t.length - 1)
-
-        if (tmp !== "~ERROR~" && lastfound.length < tmp.length) {
+        if (tmp !== "~ERROR~") {
           lastfound = tmp
           // console.log("lastfound " + lastfound)
-          // if (k <= 2) {
-          //   console.log("k <= 2")
-          //   break
-          // }          
+          break
         }
+     }
+    // for (let j = b.length, k = 1; i<=j, j > 0; j--, k++) {
+    //   let t = b.slice(0, j)
+    //   // console.log("t " + j + "  " + t )
+    //     if (lastfound.length >= t.length) {
+    //       // console.log("lastfound.length >= t.length")
+    //       break
+    //     }
+    //     const tmp = palin(t, 0, t.length - 1)
+
+    //     if (tmp !== "~ERROR~" && lastfound.length < tmp.length) {
+    //       lastfound = tmp
+    //       // console.log("lastfound " + lastfound)
+    //       // if (k <= 2) {
+    //       //   console.log("k <= 2")
+    //       //   break
+    //       // }          
+    //     }
   
-    }
+    // }
 
   
   }

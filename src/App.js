@@ -1,9 +1,9 @@
 import React from 'react'
-import {fact} from 'fact';
-import {permutator} from 'permutator';
-import {PrintList} from 'PrintList';
-import {longestPalindrome_dynamicprogramming} from 'palindrome-dynamicprogramming';
-import {longestPalindrome_expandAroundCenter} from 'palindrome-expandAroundCenter';
+import {PrintList} from 'lib/PrintList';
+import {fact} from 'components/fact';
+import {permutator} from 'components/permutator';
+import {longestPalindrome_dynamicprogramming} from 'components/palindrome-dynamicprogramming';
+import {longestPalindrome_expandAroundCenter} from 'components/palindrome-expandAroundCenter';
 
 
 

@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
-import {palindrom_data} from 'palindrom-data';
-import {longestPalindrome_dynamicprogramming} from 'palindrome-dynamicprogramming';
+import {palindrom_data} from 'components/palindrom-data';
+import {longestPalindrome_dynamicprogramming} from 'components/palindrome-dynamicprogramming';
 
 
 test.each(palindrom_data)(

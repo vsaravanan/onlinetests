@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
-import {palindrom_data} from './palindrom-data';
-import {longestPalindrome_expandAroundCenter} from './palindrome-expandAroundCenter';
+import {palindrom_data} from 'components/palindrom-data';
+import {longestPalindrome_expandAroundCenter} from 'components/palindrome-expandAroundCenter';
 
 
 
