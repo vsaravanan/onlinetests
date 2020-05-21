@@ -4,15 +4,48 @@ import {fact} from 'components/fact';
 import {permutator} from 'components/permutator';
 import {longestPalindrome_dynamicprogramming} from 'components/palindrome-dynamicprogramming';
 import {longestPalindrome_expandAroundCenter} from 'components/palindrome-expandAroundCenter';
-
-
+import { Tree } from 'components/binarytree/tree'
+import { ThemeProvider } from 'styled-components';
+import { darkTheme } from 'theme';
+import { GlobalStyles } from 'global';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props) 
+
+    this.tree = new Tree()
+    let tree = this.tree
+    tree.addValue(5);
+    tree.addValue(3);
+    tree.addValue(9);
+    // tree.addValue(4);
+    // tree.addValue(8);
+    // tree.addValue(7);
+    // tree.addValue(10);
+    console.log(tree)
+    tree.traverse()
+
+
+    tree = tree.sorted()
+
+
+    tree.addValue(6)
+    tree.traverse()    
+    tree = tree.sorted()
+    tree.traverse()    
+    // tree.remove(3)
+    // tree.traverse()    
+
+  }
 
   render() {
 
+    
     return (
-      <div className="App">
+      <ThemeProvider theme={darkTheme}>
+      <>
+        <GlobalStyles />
+        <div className="App">
         <div>
           Factorial 
           <ul>
@@ -53,6 +86,11 @@ class App extends React.Component {
           </ul>
         </div>
       </div>
+            
+      </>
+    </ThemeProvider>
+
+
     );
   }
 }
